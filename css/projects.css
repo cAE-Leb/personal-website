@@ -1,0 +1,94 @@
+:root {
+  --bg-color: #f5f1ede; /* Warm beige background */
+  --text-color: #3e3e3e; /* Soft dark gray */
+  --accent-color: #8b7355; /* Muted brown/terracotta */
+  --light-accent: #e8d5b5; /* Light wood/beige */
+  --header-footer-bg: #3a3a3a; /* Dark gray for contrast */
+  --header-footer-text: #f5f1ede; /* Warm beige text */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Intro section */
+.intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Project grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Project card styling */
+.project-card {
+  background: var(--light-accent);
+  border-radius: 0;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.project-description {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-tools {
+  margin-top: 1rem;
+}
+
+.project-tools h4 {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project-tools ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-tools li {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--header-footer-bg);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
