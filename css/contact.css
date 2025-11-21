@@ -1,0 +1,39 @@
+/* Contact page styling */
+.contact-intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.contact-links {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item span {
+    font-weight: 500;
+    color: var(--text-color);
+    min-width: 80px;
+    display: block;
+}
+
+.contact-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-left: 0.5rem;
+}
+
+.contact-link:hover {
+    color: var(--header-footer-bg);
+    text-decoration: underline;
+}
