@@ -1,18 +1,19 @@
-// Fetch and render the journal entries
 async function loadJournalEntries() {
-    const response = await fetch('posts/posts.json'); // We'll generate this file
+    const response = await fetch('/posts.json');
     const posts = await response.json();
 
     const container = document.getElementById('journal-entries');
     const postCount = document.getElementById('post-count');
     const lastPosted = document.getElementById('last-posted');
 
+    // Sort posts by date (newest first)
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    // Update metrics
     postCount.textContent = posts.length;
     lastPosted.textContent = posts[0]?.date || '--/--/----';
 
-    // Renders individual posts
+    // Render each post
     posts.forEach(post => {
         const entry = document.createElement('div');
         entry.className = 'journal-entry';
@@ -22,8 +23,8 @@ async function loadJournalEntries() {
                 <span class="entry-date">${post.date}</span>
                 <span class="expand-indicator">▼</span>
             </div>
-            <div class="entry-content">
-                ${post.content.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('')}
+            <div class="entry-content" style="display: none;">
+                ${post.content}
             </div>
         `;
         container.appendChild(entry);
