@@ -1,4 +1,3 @@
-/* Contact page styling */
 .contact-intro {
     max-width: 800px;
     margin: 2rem auto;
@@ -36,4 +35,12 @@
 .contact-link:hover {
     color: var(--header-footer-bg);
     text-decoration: underline;
+}
+
+.contact-item i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+    margin-right: 0.75rem;
 }
